@@ -3,6 +3,14 @@ from pathlib import Path
 import pandas as pd
 
 
+def load_json(path):
+    p = Path(path)
+    if not p.exists():
+        return []
+    with open(p, encoding='utf-8') as f:
+        return json.load(f)
+
+
 def save_csv(rows, path):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     flat_rows = [

@@ -14,6 +14,7 @@ class RawJobAd:
     # Structured fields populated by scrapers that expose them on-page (e.g. BongThom).
     # Left at their defaults for sources that only provide free-text descriptions.
     career_categories: List[str] = field(default_factory=list)
+    industry: str = ""
     environment: str = ""
     workplace_languages: str = ""
     schedule: str = ""

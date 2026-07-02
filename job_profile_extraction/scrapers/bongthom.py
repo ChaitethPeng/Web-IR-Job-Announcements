@@ -3,12 +3,16 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 import re
 import time
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
@@ -310,7 +314,25 @@ def scrape(pages=None):
         for cat in categories:
             print(f"Category: {cat['category']} (listed positions: {cat['job_count']})")
 
-            detail_urls = get_detail_urls_for_category(driver, cat["url"])
+            # A long run (~95 categories) has time for the browser to crash
+            # or the session to drop mid-way; losing everything scraped so
+            # far because of one bad category would waste the whole run, so
+            # isolate failures per-category and keep going with a fresh
+            # driver instead of letting the exception bubble out of scrape().
+            try:
+                detail_urls = get_detail_urls_for_category(driver, cat["url"])
+            except WebDriverException as e:
+                print(f"  browser session lost ({e}); restarting and continuing")
+                try:
+                    driver.quit()
+                except Exception:
+                    pass
+                driver = get_driver()
+                continue
+            except Exception as e:
+                print("  skip category:", cat["category"], e)
+                continue
+
             print(f"  ads found: {len(detail_urls)}")
 
             for detail_url in detail_urls:
@@ -329,7 +351,10 @@ def scrape(pages=None):
                     print("  skip detail:", detail_url, e)
 
     finally:
-        driver.quit()
+        try:
+            driver.quit()
+        except Exception:
+            pass
 
     return jobs
 

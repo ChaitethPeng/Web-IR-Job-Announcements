@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Announcement Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Khmer:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, "Noto Sans Khmer", system-ui, sans-serif;
+      background: #f4f7fb;
+      color: #14213d;
+    }
+    .hero {
+      padding: 34px 24px 26px;
+      background: linear-gradient(135deg, #12284c, #2563eb);
+      color: white;
+    }
+    .hero-inner, .app { max-width: 1280px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; }
+    .logo {
+      width: 44px; height: 44px; border-radius: 14px;
+      display: grid; place-items: center; background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.28);
+    }
+    h1 { margin: 28px 0 8px; font-size: clamp(28px, 5vw, 48px); line-height: 1.1; }
+    .subtitle { max-width: 720px; margin: 0; opacity: .9; font-size: 16px; }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 26px; }
+    .stat {
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22);
+      border-radius: 18px; padding: 16px;
+    }
+    .stat strong { display: block; font-size: 26px; }
+    .stat span { opacity: .85; font-size: 13px; }
+    .app { padding: 24px; }
+    .toolbar {
+      display: grid; grid-template-columns: 1.4fr .8fr .8fr .8fr; gap: 12px;
+      margin-top: -40px; background: white; padding: 16px; border-radius: 22px;
+      box-shadow: 0 18px 55px rgba(15, 23, 42, .16);
+      position: relative;
+    }
+    input, select {
+      width: 100%; border: 1px solid #d9e2ef; background: #f8fafc;
+      border-radius: 14px; padding: 14px 15px; font: inherit; outline: none;
+    }
+    input:focus, select:focus { border-color: #2563eb; background: white; }
+    .layout { display: grid; grid-template-columns: 260px 1fr; gap: 22px; margin-top: 24px; }
+    .sidebar, .detail, .card {
+      background: white; border: 1px solid #e5ecf6; border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, .06);
+    }
+    .sidebar { padding: 18px; height: fit-content; position: sticky; top: 16px; }
+    .sidebar h3 { margin: 0 0 14px; }
+    .cat-btn {
+      width: 100%; border: 0; background: transparent; border-radius: 14px;
+      padding: 12px; display: flex; justify-content: space-between; cursor: pointer;
+      font: inherit; color: #334155; margin-bottom: 6px; text-align: left;
+    }
+    .cat-btn:hover, .cat-btn.active { background: #eef5ff; color: #1d4ed8; font-weight: 700; }
+    .main { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 22px; align-items: start; }
+    .jobs-header { display: flex; justify-content: space-between; align-items: center; margin: 8px 0 14px; }
+    .jobs-header h2 { margin: 0; font-size: 22px; }
+    .grid { display: grid; gap: 14px; }
+    .card { padding: 18px; cursor: pointer; transition: .18s; }
+    .card:hover, .card.selected { transform: translateY(-2px); border-color: #93c5fd; box-shadow: 0 16px 40px rgba(37,99,235,.13); }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .pill { background: #eef2ff; color: #3730a3; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .pill.green { background: #ecfdf5; color: #047857; }
+    .pill.orange { background: #fff7ed; color: #c2410c; }
+    .pill.blue { background: #eff6ff; color: #1d4ed8; }
+    .title { font-size: 18px; font-weight: 800; margin: 0 0 6px; }
+    .company { color: #475569; font-weight: 600; }
+    .raw { color: #64748b; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .detail { padding: 22px; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; }
+    .detail h2 { margin: 0 0 8px; }
+    .section-title { margin: 22px 0 8px; font-size: 13px; color: #64748b; text-transform: uppercase; letter-spacing: .08em; font-weight: 800; }
+    ul { margin: 8px 0 0; padding-left: 20px; }
+    li { margin-bottom: 7px; }
+    .field-row { display: flex; gap: 8px; align-items: baseline; margin-top: 6px; font-size: 14px; color: #334155; }
+    .field-row b { color: #0f172a; min-width: 82px; }
+    .apply {
+      display: inline-flex; justify-content: center; align-items: center; width: 100%;
+      margin-top: 20px; text-decoration: none; background: #2563eb; color: white;
+      border-radius: 14px; padding: 13px 16px; font-weight: 800;
+    }
+    .empty { padding: 35px; text-align: center; color: #64748b; background: white; border-radius: 20px; }
+    .loading { padding: 40px; text-align: center; color: #64748b; }
+    @media (max-width: 1050px) {
+      .layout, .main { grid-template-columns: 1fr; }
+      .sidebar, .detail { position: static; max-height: none; }
+      .stats, .toolbar { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 620px) { .stats, .toolbar { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand"><div class="logo">💼</div> Job Scraper Portal</div>
+      <h1>Explore Job Announcements</h1>
+      <p class="subtitle">Live data scraped from Khmer24, BongThom and CamHR. Filter by category, source website, location and salary, or search by title, company, skill or technology.</p>
+      <div class="stats">
+        <div class="stat"><strong id="totalJobs">0</strong><span>Total announcements</span></div>
+        <div class="stat"><strong id="totalSources">0</strong><span>Scraped websites</span></div>
+        <div class="stat"><strong id="totalLocations">0</strong><span>Locations</span></div>
+        <div class="stat"><strong id="totalSkills">0</strong><span>Skills detected</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app">
+    <div class="toolbar">
+      <input id="searchInput" placeholder="Search title, company, skill, technology..." />
+      <select id="sourceFilter"><option value="all">All websites</option></select>
+      <select id="locationFilter"><option value="all">All locations</option></select>
+      <select id="salaryFilter">
+        <option value="all">Any salary</option>
+        <option value="0-300">Under $300</option>
+        <option value="300-500">$300 - $500</option>
+        <option value="500-1000">$500 - $1000</option>
+        <option value="1000-999999">$1000+</option>
+        <option value="unspecified">Negotiable / Not specified</option>
+      </select>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h3>Categories</h3>
+        <div id="categories"></div>
+      </aside>
+
+      <section class="main">
+        <div>
+          <div class="jobs-header">
+            <h2>Announcements</h2>
+            <span id="resultCount"></span>
+          </div>
+          <div id="jobList" class="grid"><div class="loading">Loading jobs...</div></div>
+        </div>
+        <aside id="detailPanel" class="detail"></aside>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const state = {
+      category: "All",
+      source: "all",
+      location: "all",
+      salary: "all",
+      query: "",
+      selectedIndex: 0,
+    };
+
+    let allJobs = [];
+
+    function parseSalaryMin(text) {
+      if (!text) return null;
+      const match = String(text).replace(/,/g, "").match(/\d+(\.\d+)?/);
+      return match ? parseFloat(match[0]) : null;
+    }
+
+    function matchesSalaryBucket(job, bucket) {
+      if (bucket === "all") return true;
+      const min = parseSalaryMin(job.salary_information);
+      if (bucket === "unspecified") return min === null;
+      if (min === null) return false;
+      const [lo, hi] = bucket.split("-").map(Number);
+      return min >= lo && min < hi;
+    }
+
+    function unique(values) {
+      return [...new Set(values.filter(Boolean))].sort();
+    }
+
+    async function loadData() {
+      const [jobs, meta] = await Promise.all([
+        fetch("/api/jobs").then(r => r.json()),
+        fetch("/api/meta").then(r => r.json()),
+      ]);
+      allJobs = jobs;
+      initFilters(meta);
+      renderJobs();
+    }
+
+    function initFilters(meta) {
+      document.getElementById("totalJobs").textContent = meta.total_jobs;
+      document.getElementById("totalSources").textContent = meta.sources.length;
+      document.getElementById("totalLocations").textContent = meta.locations.length;
+      document.getElementById("totalSkills").textContent = meta.total_skills;
+
+      const sourceFilter = document.getElementById("sourceFilter");
+      meta.sources.forEach(source => sourceFilter.insertAdjacentHTML("beforeend", `<option value="${source}">${source}</option>`));
+
+      const locationFilter = document.getElementById("locationFilter");
+      meta.locations.forEach(location => locationFilter.insertAdjacentHTML("beforeend", `<option value="${location}">${location}</option>`));
+
+      renderCategories(meta.categories, meta.category_counts, meta.total_jobs);
+    }
+
+    function renderCategories(categories, counts, total) {
+      const items = ["All", ...categories];
+      const countFor = cat => (cat === "All" ? total : (counts[cat] || 0));
+      document.getElementById("categories").innerHTML = items.map(cat => `
+        <button class="cat-btn ${state.category === cat ? "active" : ""}" onclick="setCategory('${cat}')">
+          <span>${cat}</span><strong>${countFor(cat)}</strong>
+        </button>
+      `).join("");
+    }
+
+    function setCategory(category) {
+      state.category = category;
+      state.selectedIndex = 0;
+      document.querySelectorAll(".cat-btn").forEach(btn => btn.classList.remove("active"));
+      renderJobs();
+      // Re-highlight the active category button without re-fetching meta.
+      document.querySelectorAll(".cat-btn").forEach(btn => {
+        if (btn.textContent.trim().startsWith(category)) btn.classList.add("active");
+      });
+    }
+
+    function getFilteredJobs() {
+      const q = state.query.toLowerCase().trim();
+      return allJobs.filter(job => {
+        const searchable = [
+          job.title, job.company, job.location, job.salary_information, job.raw_text,
+          ...(job.skills || []), ...(job.technologies || []), ...(job.qualifications || []), ...(job.responsibilities || [])
+        ].join(" ").toLowerCase();
+
+        return (state.category === "All" || job.category === state.category)
+          && (state.source === "all" || job.source === state.source)
+          && (state.location === "all" || job.location === state.location)
+          && matchesSalaryBucket(job, state.salary)
+          && (!q || searchable.includes(q));
+      });
+    }
+
+    function shortText(text, length = 220) {
+      if (!text) return "No description available.";
+      return text.length > length ? text.slice(0, length) + "..." : text;
+    }
+
+    function renderJobs() {
+      const filtered = getFilteredJobs();
+      document.getElementById("resultCount").textContent = `${filtered.length} result${filtered.length !== 1 ? "s" : ""}`;
+
+      if (!filtered.length) {
+        document.getElementById("jobList").innerHTML = `<div class="empty">No job announcement found. Try another search or filter.</div>`;
+        document.getElementById("detailPanel").innerHTML = `<h2>No detail</h2><p>Choose another filter to see announcements.</p>`;
+        return;
+      }
+
+      const selected = filtered[Math.min(state.selectedIndex, filtered.length - 1)];
+      document.getElementById("jobList").innerHTML = filtered.map((job) => `
+        <article class="card ${selected.id === job.id ? "selected" : ""}" onclick="selectJob(${job.id})">
+          <p class="title">${job.title}</p>
+          <div class="company">${job.company || "Unknown company"}</div>
+          <div class="meta">
+            <span class="pill">${job.source}</span>
+            <span class="pill green">${job.salary_information || "Salary N/A"}</span>
+            <span class="pill orange">${job.category}</span>
+          </div>
+          <div>📍 ${job.location || "Location N/A"}</div>
+          <p class="raw">${shortText(job.raw_text)}</p>
+        </article>
+      `).join("");
+
+      renderDetail(selected);
+    }
+
+    function selectJob(id) {
+      const filtered = getFilteredJobs();
+      const index = filtered.findIndex(job => job.id === id);
+      state.selectedIndex = index === -1 ? 0 : index;
+      renderJobs();
+      if (window.innerWidth <= 1050) {
+        document.getElementById("detailPanel").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function renderList(items, emptyText) {
+      if (!items || !items.length) return `<p style="color:#94a3b8">${emptyText}</p>`;
+      return `<ul>${items.map(item => `<li>${item}</li>`).join("")}</ul>`;
+    }
+
+    function renderDetail(job) {
+      document.getElementById("detailPanel").innerHTML = `
+        <span class="pill orange">${job.category}</span>
+        <h2>${job.title}</h2>
+        <div class="company">${job.company || "Unknown company"}</div>
+        <div class="meta">
+          <span class="pill blue">${job.source}</span>
+          <span class="pill green">${job.salary_information || "Salary N/A"}</span>
+        </div>
+
+        <div class="field-row"><b>Location</b><span>${job.location || "N/A"}</span></div>
+        <div class="field-row"><b>Deadline</b><span>${job.deadline || "Not specified"}</span></div>
+        <div class="field-row"><b>Source</b><span>${job.source}</span></div>
+
+        <div class="section-title">Skills</div>
+        ${renderList(job.skills, "No extracted skills yet.")}
+
+        <div class="section-title">Technologies</div>
+        ${renderList(job.technologies, "No extracted technologies yet.")}
+
+        <div class="section-title">Qualifications</div>
+        ${renderList(job.qualifications, "No extracted qualifications yet.")}
+
+        <div class="section-title">Responsibilities</div>
+        ${renderList(job.responsibilities, "No extracted responsibilities yet.")}
+
+        <div class="section-title">Benefits</div>
+        ${renderList(job.benefits, "No benefits listed.")}
+
+        <div class="section-title">Full announcement text</div>
+        <p style="line-height:1.65; color:#475569; white-space: pre-wrap;">${job.raw_text || "No raw text available."}</p>
+
+        <a class="apply" href="${job.url}" target="_blank" rel="noopener">Open Original Announcement</a>
+      `;
+    }
+
+    document.getElementById("searchInput").addEventListener("input", e => {
+      state.query = e.target.value;
+      state.selectedIndex = 0;
+      renderJobs();
+    });
+    document.getElementById("sourceFilter").addEventListener("change", e => {
+      state.source = e.target.value;
+      state.selectedIndex = 0;
+      renderJobs();
+    });
+    document.getElementById("locationFilter").addEventListener("change", e => {
+      state.location = e.target.value;
+      state.selectedIndex = 0;
+      renderJobs();
+    });
+    document.getElementById("salaryFilter").addEventListener("change", e => {
+      state.salary = e.target.value;
+      state.selectedIndex = 0;
+      renderJobs();
+    });
+
+    loadData();
+  </script>
+</body>
+</html>
