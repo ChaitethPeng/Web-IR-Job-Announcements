@@ -1,0 +1,572 @@
+[
+  {
+    "category_id": "24",
+    "category": "Business Administration",
+    "job_count": 124,
+    "url": "https://www.bongthom.com/job_category-24.html"
+  },
+  {
+    "category_id": "10",
+    "category": "Educate/Train/Teaching",
+    "job_count": 107,
+    "url": "https://www.bongthom.com/job_category-10.html"
+  },
+  {
+    "category_id": "20",
+    "category": "Sales / Marketing",
+    "job_count": 82,
+    "url": "https://www.bongthom.com/job_category-20.html"
+  },
+  {
+    "category_id": "12",
+    "category": "Exec. / Management",
+    "job_count": 73,
+    "url": "https://www.bongthom.com/job_category-12.html"
+  },
+  {
+    "category_id": "1",
+    "category": "Accounting",
+    "job_count": 49,
+    "url": "https://www.bongthom.com/job_category-1.html"
+  },
+  {
+    "category_id": "63",
+    "category": "Banking / Finance",
+    "job_count": 48,
+    "url": "https://www.bongthom.com/job_category-63.html"
+  },
+  {
+    "category_id": "37",
+    "category": "Social Work",
+    "job_count": 32,
+    "url": "https://www.bongthom.com/job_category-37.html"
+  },
+  {
+    "category_id": "34",
+    "category": "Community Development",
+    "job_count": 30,
+    "url": "https://www.bongthom.com/job_category-34.html"
+  },
+  {
+    "category_id": "6",
+    "category": "Computer - General",
+    "job_count": 29,
+    "url": "https://www.bongthom.com/job_category-6.html"
+  },
+  {
+    "category_id": "4",
+    "category": "Assistant",
+    "job_count": 24,
+    "url": "https://www.bongthom.com/job_category-4.html"
+  },
+  {
+    "category_id": "2",
+    "category": "Admin / Supervisory",
+    "job_count": 23,
+    "url": "https://www.bongthom.com/job_category-2.html"
+  },
+  {
+    "category_id": "38",
+    "category": "Communications",
+    "job_count": 22,
+    "url": "https://www.bongthom.com/job_category-38.html"
+  },
+  {
+    "category_id": "3",
+    "category": "Agriculture",
+    "job_count": 21,
+    "url": "https://www.bongthom.com/job_category-3.html"
+  },
+  {
+    "category_id": "62",
+    "category": "Advisor / Individual Consultant",
+    "job_count": 20,
+    "url": "https://www.bongthom.com/job_category-62.html"
+  },
+  {
+    "category_id": "42",
+    "category": "HR",
+    "job_count": 19,
+    "url": "https://www.bongthom.com/job_category-42.html"
+  },
+  {
+    "category_id": "52",
+    "category": "Economics",
+    "job_count": 18,
+    "url": "https://www.bongthom.com/job_category-52.html"
+  },
+  {
+    "category_id": "13",
+    "category": "Health/Medical",
+    "job_count": 17,
+    "url": "https://www.bongthom.com/job_category-13.html"
+  },
+  {
+    "category_id": "55",
+    "category": "Invitation for Bids",
+    "job_count": 15,
+    "url": "https://www.bongthom.com/job_category-55.html"
+  },
+  {
+    "category_id": "18",
+    "category": "Media",
+    "job_count": 14,
+    "url": "https://www.bongthom.com/job_category-18.html"
+  },
+  {
+    "category_id": "90",
+    "category": "Health / Medical - Psychology",
+    "job_count": 13,
+    "url": "https://www.bongthom.com/job_category-90.html"
+  },
+  {
+    "category_id": "19",
+    "category": "Research / Development",
+    "job_count": 13,
+    "url": "https://www.bongthom.com/job_category-19.html"
+  },
+  {
+    "category_id": "8",
+    "category": "Customer Service/Support",
+    "job_count": 11,
+    "url": "https://www.bongthom.com/job_category-8.html"
+  },
+  {
+    "category_id": "28",
+    "category": "Computer - Networking",
+    "job_count": 10,
+    "url": "https://www.bongthom.com/job_category-28.html"
+  },
+  {
+    "category_id": "11",
+    "category": "Engineering",
+    "job_count": 10,
+    "url": "https://www.bongthom.com/job_category-11.html"
+  },
+  {
+    "category_id": "26",
+    "category": "Law",
+    "job_count": 10,
+    "url": "https://www.bongthom.com/job_category-26.html"
+  },
+  {
+    "category_id": "66",
+    "category": "Logistics",
+    "job_count": 10,
+    "url": "https://www.bongthom.com/job_category-66.html"
+  },
+  {
+    "category_id": "87",
+    "category": "Service & Hospitality",
+    "job_count": 10,
+    "url": "https://www.bongthom.com/job_category-87.html"
+  },
+  {
+    "category_id": "29",
+    "category": "Computer - Programming",
+    "job_count": 9,
+    "url": "https://www.bongthom.com/job_category-29.html"
+  },
+  {
+    "category_id": "74",
+    "category": "Agriculture - Agronomy",
+    "job_count": 8,
+    "url": "https://www.bongthom.com/job_category-74.html"
+  },
+  {
+    "category_id": "70",
+    "category": "Engineer - Electrical",
+    "job_count": 8,
+    "url": "https://www.bongthom.com/job_category-70.html"
+  },
+  {
+    "category_id": "94",
+    "category": "Accounting - Taxation / Audit",
+    "job_count": 7,
+    "url": "https://www.bongthom.com/job_category-94.html"
+  },
+  {
+    "category_id": "9",
+    "category": "Driving/Transport",
+    "job_count": 7,
+    "url": "https://www.bongthom.com/job_category-9.html"
+  },
+  {
+    "category_id": "45",
+    "category": "Resources & Environment",
+    "job_count": 7,
+    "url": "https://www.bongthom.com/job_category-45.html"
+  },
+  {
+    "category_id": "32",
+    "category": "Rural development",
+    "job_count": 7,
+    "url": "https://www.bongthom.com/job_category-32.html"
+  },
+  {
+    "category_id": "46",
+    "category": "Arts / Graphic Design",
+    "job_count": 6,
+    "url": "https://www.bongthom.com/job_category-46.html"
+  },
+  {
+    "category_id": "98",
+    "category": "Food Science",
+    "job_count": 6,
+    "url": "https://www.bongthom.com/job_category-98.html"
+  },
+  {
+    "category_id": "36",
+    "category": "Monitoring & Evaluation",
+    "job_count": 6,
+    "url": "https://www.bongthom.com/job_category-36.html"
+  },
+  {
+    "category_id": "30",
+    "category": "Translation / Interpretation",
+    "job_count": 6,
+    "url": "https://www.bongthom.com/job_category-30.html"
+  },
+  {
+    "category_id": "56",
+    "category": "Call for Proposals",
+    "job_count": 4,
+    "url": "https://www.bongthom.com/job_category-56.html"
+  },
+  {
+    "category_id": "59",
+    "category": "Child Protection",
+    "job_count": 4,
+    "url": "https://www.bongthom.com/job_category-59.html"
+  },
+  {
+    "category_id": "104",
+    "category": "Manufacturing - Quality Assurance",
+    "job_count": 4,
+    "url": "https://www.bongthom.com/job_category-104.html"
+  },
+  {
+    "category_id": "67",
+    "category": "Operations Management",
+    "job_count": 4,
+    "url": "https://www.bongthom.com/job_category-67.html"
+  },
+  {
+    "category_id": "95",
+    "category": "Stock / Inventory",
+    "job_count": 4,
+    "url": "https://www.bongthom.com/job_category-95.html"
+  },
+  {
+    "category_id": "72",
+    "category": "Agriculture - Animal Science",
+    "job_count": 3,
+    "url": "https://www.bongthom.com/job_category-72.html"
+  },
+  {
+    "category_id": "47",
+    "category": "Child Care",
+    "job_count": 3,
+    "url": "https://www.bongthom.com/job_category-47.html"
+  },
+  {
+    "category_id": "69",
+    "category": "Engineer - Civil",
+    "job_count": 3,
+    "url": "https://www.bongthom.com/job_category-69.html"
+  },
+  {
+    "category_id": "71",
+    "category": "Engineer - Infrastructure",
+    "job_count": 3,
+    "url": "https://www.bongthom.com/job_category-71.html"
+  },
+  {
+    "category_id": "15",
+    "category": "Hotel/Restaurant",
+    "job_count": 3,
+    "url": "https://www.bongthom.com/job_category-15.html"
+  },
+  {
+    "category_id": "100",
+    "category": "Mechanics",
+    "job_count": 3,
+    "url": "https://www.bongthom.com/job_category-100.html"
+  },
+  {
+    "category_id": "33",
+    "category": "Advocacy",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-33.html"
+  },
+  {
+    "category_id": "75",
+    "category": "Agriculture - Forestry",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-75.html"
+  },
+  {
+    "category_id": "73",
+    "category": "Agriculture - Veterinary Medicine",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-73.html"
+  },
+  {
+    "category_id": "25",
+    "category": "Analyst / Assessment",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-25.html"
+  },
+  {
+    "category_id": "53",
+    "category": "Construction",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-53.html"
+  },
+  {
+    "category_id": "68",
+    "category": "Engineer - Chemical",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-68.html"
+  },
+  {
+    "category_id": "14",
+    "category": "Home Help/Labour",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-14.html"
+  },
+  {
+    "category_id": "60",
+    "category": "Laboratory Work",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-60.html"
+  },
+  {
+    "category_id": "65",
+    "category": "Maintenance",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-65.html"
+  },
+  {
+    "category_id": "88",
+    "category": "Manufacturing Production",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-88.html"
+  },
+  {
+    "category_id": "41",
+    "category": "Shipping / Import / Export",
+    "job_count": 2,
+    "url": "https://www.bongthom.com/job_category-41.html"
+  },
+  {
+    "category_id": "80",
+    "category": "Agriculture - Cultivation",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-80.html"
+  },
+  {
+    "category_id": "81",
+    "category": "Agriculture & Fisheries",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-81.html"
+  },
+  {
+    "category_id": "84",
+    "category": "Agriculture - Livestock",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-84.html"
+  },
+  {
+    "category_id": "43",
+    "category": "Architecture",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-43.html"
+  },
+  {
+    "category_id": "83",
+    "category": "Engineer - Health and Safety",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-83.html"
+  },
+  {
+    "category_id": "35",
+    "category": "Entertainment",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-35.html"
+  },
+  {
+    "category_id": "102",
+    "category": "Hospitality - Bar",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-102.html"
+  },
+  {
+    "category_id": "17",
+    "category": "Manufacture / Operations",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-17.html"
+  },
+  {
+    "category_id": "103",
+    "category": "Manufacturing - Quality Control",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-103.html"
+  },
+  {
+    "category_id": "64",
+    "category": "Quality Control",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-64.html"
+  },
+  {
+    "category_id": "27",
+    "category": "Tourism",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-27.html"
+  },
+  {
+    "category_id": "77",
+    "category": "Website - Development",
+    "job_count": 1,
+    "url": "https://www.bongthom.com/job_category-77.html"
+  },
+  {
+    "category_id": "99",
+    "category": "Agriculture - Aquaculture",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-99.html"
+  },
+  {
+    "category_id": "40",
+    "category": "Capacity development",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-40.html"
+  },
+  {
+    "category_id": "5",
+    "category": "Catering",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-5.html"
+  },
+  {
+    "category_id": "57",
+    "category": "Expression of Interest",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-57.html"
+  },
+  {
+    "category_id": "61",
+    "category": "Fashion / Model / Beauty",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-61.html"
+  },
+  {
+    "category_id": "79",
+    "category": "Freelancer",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-79.html"
+  },
+  {
+    "category_id": "101",
+    "category": "Insurance",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-101.html"
+  },
+  {
+    "category_id": "76",
+    "category": "Land Management",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-76.html"
+  },
+  {
+    "category_id": "92",
+    "category": "Library",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-92.html"
+  },
+  {
+    "category_id": "82",
+    "category": "Manufacturing - Health and Safety",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-82.html"
+  },
+  {
+    "category_id": "86",
+    "category": "Manufacturing - Merchandising",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-86.html"
+  },
+  {
+    "category_id": "23",
+    "category": "Other",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-23.html"
+  },
+  {
+    "category_id": "97",
+    "category": "Plumbing",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-97.html"
+  },
+  {
+    "category_id": "96",
+    "category": "Real Estate",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-96.html"
+  },
+  {
+    "category_id": "22",
+    "category": "Security",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-22.html"
+  },
+  {
+    "category_id": "85",
+    "category": "Service - Delivery",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-85.html"
+  },
+  {
+    "category_id": "89",
+    "category": "Software Quality Assurance",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-89.html"
+  },
+  {
+    "category_id": "93",
+    "category": "Sports & Fitness",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-93.html"
+  },
+  {
+    "category_id": "49",
+    "category": "Telecommunications",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-49.html"
+  },
+  {
+    "category_id": "58",
+    "category": "Training / Workshops",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-58.html"
+  },
+  {
+    "category_id": "91",
+    "category": "Transportation - Aviation",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-91.html"
+  },
+  {
+    "category_id": "39",
+    "category": "Volunteer",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-39.html"
+  },
+  {
+    "category_id": "78",
+    "category": "Website - SEO",
+    "job_count": 0,
+    "url": "https://www.bongthom.com/job_category-78.html"
+  }
+]

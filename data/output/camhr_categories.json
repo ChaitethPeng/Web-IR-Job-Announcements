@@ -1,0 +1,106 @@
+[
+  {
+    "category": "Sales",
+    "job_count": 17
+  },
+  {
+    "category": "Accounting",
+    "job_count": 14
+  },
+  {
+    "category": "Technician/Maintenance",
+    "job_count": 6
+  },
+  {
+    "category": "Logistics/Shipping/Deliver/Warehouse",
+    "job_count": 5
+  },
+  {
+    "category": "Merchandising/Purchasing",
+    "job_count": 5
+  },
+  {
+    "category": "Others",
+    "job_count": 5
+  },
+  {
+    "category": "Media/Advertising",
+    "job_count": 4
+  },
+  {
+    "category": "IT",
+    "job_count": 4
+  },
+  {
+    "category": "Customer Service",
+    "job_count": 4
+  },
+  {
+    "category": "Catering/Restaurant",
+    "job_count": 4
+  },
+  {
+    "category": "Administration",
+    "job_count": 3
+  },
+  {
+    "category": "Management",
+    "job_count": 3
+  },
+  {
+    "category": "Design",
+    "job_count": 3
+  },
+  {
+    "category": "Marketing",
+    "job_count": 3
+  },
+  {
+    "category": "Architecture/Engineering",
+    "job_count": 2
+  },
+  {
+    "category": "Human Resource",
+    "job_count": 2
+  },
+  {
+    "category": "Assistant/Secretary",
+    "job_count": 2
+  },
+  {
+    "category": "Manufacturing",
+    "job_count": 2
+  },
+  {
+    "category": "Medical/Health/Nursing",
+    "job_count": 2
+  },
+  {
+    "category": "Finance",
+    "job_count": 2
+  },
+  {
+    "category": "Operation/Production",
+    "job_count": 2
+  },
+  {
+    "category": "QC/QA",
+    "job_count": 2
+  },
+  {
+    "category": "Education/Training",
+    "job_count": 1
+  },
+  {
+    "category": "Cashier/Receptionist",
+    "job_count": 1
+  },
+  {
+    "category": "Translation/Interpretation",
+    "job_count": 1
+  },
+  {
+    "category": "Project Management",
+    "job_count": 1
+  }
+]
